@@ -10,9 +10,20 @@ using System.Windows.Forms;
 
 namespace sharp_less1
 {
-    public Form1()
+    public partial class Form1 : Form
     {
-        InitializeComponent();
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            gpu vcard = new gpu("rtx2080ti", "12Gb", 4000);
+            // vcard.name = "rtx 2080ti";
+            // vcard.cores = 4000;
+            label1.Text = vcard.Name;
+        }
     }
 
     class gpu
@@ -46,16 +57,5 @@ namespace sharp_less1
 
     class s_gpu : gpu {
     }
-    public partial class Form1 : Form
-    {
-        
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            gpu vcard = new gpu("rtx2080ti", "12Gb", 4000);
-           // vcard.name = "rtx 2080ti";
-           // vcard.cores = 4000;
-            label1.Text = vcard.Name;
-        }
-    }
+    
 }
